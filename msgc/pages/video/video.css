@@ -1,0 +1,84 @@
+#container {
+  background-color: #fae8c8;
+}
+
+#container > #main {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+#container > #main > .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container > #main > .list > .list-item {
+  width: calc((100% - 20px)/3);
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#container > #main > .list > .list-item > div:first-child {
+  position: relative;
+}
+
+#container > #main > .list > .list-item > div:first-child > div {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  padding: 5px;
+}
+
+#container > #main > .list > .list-item > div:first-child > img {
+  width: 100%;
+}
+
+#container > #main > .list > .list-item > div:last-child {
+  padding: 8px 8px 14px 8px;
+}
+
+#container > #main > .list > .list-item:hover {
+  -webkit-box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+#container > #main > .pager {
+  padding: 40px 0;
+  text-align: center;
+}
+
+#container > #main > .pager button {
+  background-color: #fff;
+  font-size: 16px;
+  height: 30px;
+  padding: 0 14px;
+  margin: 3px;
+}
+
+#container > #main > .pager button.active {
+  background-color: orange;
+  color: #fff;
+  pointer-events: none;
+}
+/*# sourceMappingURL=video.css.map */

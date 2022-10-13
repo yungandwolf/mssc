@@ -1,0 +1,18 @@
+// footer.scss
+// 注意开启watch scss 功能
+#footer{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  >div{
+    margin-bottom: 10px;
+    >a{
+  color: #fff;
+    }
+  }
+  >p{
+    font-size: 12px;
+  }
+}

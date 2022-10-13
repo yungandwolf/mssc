@@ -1,0 +1,68 @@
+#header {
+  > div {
+    // base.css声明的全局变量
+    width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+    > div:first-child {
+      display: flex;
+      align-items: center;
+
+      > .search {
+        background-color: #fff;
+        border-radius: 100px;
+        overflow: hidden;
+        margin: 0 20px;
+        display: flex;
+        align-items: center;
+
+        > input {
+          width: 160px;
+          height: 42px;
+          font-size: 18px;
+          padding: 10px 15px;
+          // background-color: pink;
+        }
+
+        > button {
+          background-color: #f94751;
+          color: white;
+          border-radius: 100px;
+          height: 38px;
+          margin-right: 2px;
+          padding: 0 15px;
+          font-size: 16px;
+        }
+      }
+
+      img {
+        height: 60px;
+      }
+
+      > div:last-child {
+        display: flex;
+        height: var(--header-height);
+        align-items: center;
+        a {
+          font-size: 20px;
+          font-weight: bold;
+          padding: 0 15px;
+          border-radius: 50px;
+          &:hover {
+            background-color: #f8625b;
+          }
+        }
+      }
+    }
+
+    a {
+      color: #fff;
+    }
+
+    // 登录
+  }
+}

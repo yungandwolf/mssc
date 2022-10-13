@@ -1,0 +1,83 @@
+#header > div {
+  width: var(--container-width);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+#header > div > div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header > div > div:first-child > .search {
+  background-color: #fff;
+  border-radius: 100px;
+  overflow: hidden;
+  margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header > div > div:first-child > .search > input {
+  width: 160px;
+  height: 42px;
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+#header > div > div:first-child > .search > button {
+  background-color: #f94751;
+  color: white;
+  border-radius: 100px;
+  height: 38px;
+  margin-right: 2px;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+#header > div > div:first-child img {
+  height: 60px;
+}
+
+#header > div > div:first-child > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: var(--header-height);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header > div > div:first-child > div:last-child a {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 15px;
+  border-radius: 50px;
+}
+
+#header > div > div:first-child > div:last-child a:hover {
+  background-color: #f8625b;
+}
+
+#header > div a {
+  color: #fff;
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,68 @@
+01为了有代码提示 先初始化，npm int-y 下载jquery包 npm i jqery
+
+02每个网页由三个文件组成 html css js
+首页
+视频
+商场
+笔记
+登录
+注册
+
+为了存放不同页面的代码，创建pages文件夹 里面创建不同页面文件夹
+
+03 图片，音频，视频等资源，存放资源创建assets或resource目录
+也可以存放一些公共的css或者js代码
+
+04 index.html
+这是一个特殊名称的文件，服务器默认设置是：访问网站时默认开启的根目录是index.html 文件在index.html中引用：reset.css jquery 脚本 common.js 和request.js
+引入标签栏的图标
+
+在index.html中书写div#container 标签
+在pages中每个页面的html中，书写h1标签，写上内容
+在index.html中书写 超链接跳转，点击后修改地址栏的参数？page=名字
+书写js代码，读取地址栏的page参数，拼接处路径
+利用$.load加载指定页面到div#container中
+
+
+创建components
+-- 组成页面的零件，例如头部栏和脚部栏
+把这些分离到不同的组件里面
+-- componnents/header/....
+-- componnents/footer/....
+
+在index.html中，利用load把头和脚组件引入
+-头和脚的代码真正运行时，就是在index.html里
+所以 头和脚中，可以使用index.html中的内容
+
+在assets/css/base.css中，制作基础样式
+
+制作脚部组件，书写css样式
+-注意：引入css文件时，是相对于index.html的所以脚本是相对于index.html中使用的
+
+
+完成头部栏和脚部栏的html和css
+
+请求的封装问题
+-- 做法1：在每个js文件中书写请求代码
+-----问题1：一旦服务器地址变更，需要到每个文件中修改
+-----问题2：维护起来不方便，因为请求地址在不同文件中存储
+-----问题3：请求模块发生变化，不用$.get了，也需要挨个文件修改
+
+解决方法：把所有请求的地址 统一放在一个文件里，统一修改
+--assets/js/requrest.js
+
+
+制作video页面
+-html中参考效果图，利用假数据完成基本的html和css样式
+-在video.js中发请求，把数据转换成HTML，添加到页面上
+--分页的制作
+---通过返回值中的页数，来制作分页部分
+---利用委托方式，实现页数的点击操作逻辑
+
+
+--商城页面
+-接口地址：https://serverms.xin88.top/mall?page=1
+-制作步骤：
+---先书写假数据HTML，制作CSS样式：模仿视频页的做法
+---请求数据，拼接成HTML 放到页面上
+---参考视频页的分页，来完成此页面的分页

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>美食广场</title>
+    <!-- 先引入重置，在引入当前项目制作的基础样式 -->
+    <!-- 顺序不能乱，否则会导致基础样式被重置 -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+
+    <!-- 这两个js 不操作DOM，所在以在头部进入没有关系 -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- JQ脚本必须在最上方写，防止其他文件中的代码 依赖JQ -->
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/request.js"></script>
+
+    <!-- 引入标签栏的图片 -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- 访问服务器地址时，不指定文件名，则自动访问index.html 文件 -->
+    <div id="header"></div>
+
+    <div id="container"></div>
+
+    <div id="footer"></div>
+
+    <script>
+      $('#header').load('./components/header/header.html')
+      $('#footer').load('./components/footer/footer.html')
+
+      // 设计理念：根据路径参数page，来加载对应的网页内容
+      // const params = new URLSearchParams(location.search)
+      // 如果get获取的值是null，则改为home首页
+      // 逻辑或的短路语法：从左到右首个 真值
+      // const page = params.get('page') || 'home'
+      const page = Q.search('page') || 'home'
+      console.log('page', page)
+      console.log(Q)
+
+      // 假设 note页面，路径是 ./pages/note/note.html
+      $('#container').load(`./pages/${page}/${page}.html`)
+    </script>
+  </body>
+</html>
