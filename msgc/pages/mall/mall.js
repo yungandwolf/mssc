@@ -13,7 +13,7 @@ $(function(){
           <div>
             <a href="">${item.name}</a>
             <div>
-              <span>${item.price}</span>
+              <span>￥${item.price}</span>
               <span>月售${item.sale_count}</span>
             </div>
           </div>
